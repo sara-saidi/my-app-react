@@ -1,22 +1,25 @@
-import logo from './logo.svg';
+import Form from 'react-bootstrap/Form';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Bonjour </h1>
+        <Form.Group className="mb-3">
+        <Form.Label>Disabled input</Form.Label>
+        <Form.Control placeholder="Disabled input" disabled />
+      </Form.Group>
+      <Form.Group className="mb-3">
+        <Form.Label>Disabled select menu</Form.Label>
+        <Form.Select disabled>
+          <option>Disabled select</option>
+        </Form.Select>
+      </Form.Group>
+      <Form.Group className="mb-3">
+        <Form.Check type="checkbox" label="Can't check this" disabled />
+      </Form.Group>
       </header>
     </div>
   );
